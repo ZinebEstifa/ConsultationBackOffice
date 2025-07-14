@@ -1,0 +1,47 @@
+INSERT INTO `consultationbackoffice`.`agentsdgi` (id_agentsDGI, email)
+VALUES
+(1,  'ahmed.larbi@dgi.ma'),
+(2,'fatima.zahra@dgi.ma'),
+(3,'omar.alami@dgi.ma'),
+(4,'sara.bj@dgi.ma'),
+(5, 'karim.mansour@dgi.ma'),
+(6,'nadia.elfassi@dgi.ma'),
+(7,'youssef.bouzid@dgi.ma'),
+(8, 'amina.chk@dgi.ma');
+
+INSERT INTO `consultationbackoffice`.`declaration` (id_declaration, IF_groupe_société, raison_sociale, adresse_siège_social, exercice_debut, exercice_fin, date_depot, statut)
+VALUES
+(101, 10000001, 'Industries du Sud S.A.', '15 Rue des Usines, Casablanca', '2025-01-01', '2025-12-31', '2025-01-25', 'Brouillon'),
+(102, 10000002, 'Agri-Invest Maroc SARL', '20 Boulevard Agricole, Rabat', '2025-01-01', '2025-12-31', '2025-02-20', 'Validé'),
+(103, 10000003, 'Tech Solutions Africa S.A.', 'Parc Techno, Technopolis, Salé', '2025-01-01', '2025-12-31', '2025-03-15', 'Déposé'),
+(104, 10000004, 'Textile Innovations SA', '10 Zone Industrielle, Fès', '2025-01-01', '2025-12-31', '2025-04-28', 'Brouillon'),
+(105, 10000005, 'PharmaCare Maroc', '5 Avenue de la Santé, Agadir', '2025-01-01', '2025-12-31', '2025-05-18', 'Validé'),
+(106, 10000006, 'Construction Moderne SARL', '30 Rue des Bâtisseurs, Marrakech', '2025-01-01', '2025-12-31', '2025-06-22', 'Déposé'),
+(107, 10000007, 'Transport Express Logistique', '25 Route de l''Aéroport, Tanger', '2025-01-01', '2025-12-31', '2025-07-15', 'Brouillon'),
+(108, 10000008, 'Énergie Verte Holdings', '8 Boulevard de l''Énergie, Oujda', '2025-01-01', '2025-12-31', '2025-08-24', 'Validé');
+
+INSERT INTO `consultationbackoffice`.`ligne_declaration` (
+    id_ligne_declaration,
+    id_declaration,
+    IF_société_groupe_bénéficié_transfert,
+    Nature_de_l_evenement,
+    Date_de_l_evenement,
+    Nature_des_immobilisations,
+    Identification,
+    Valeur_nette_comptable_au_jour_du_transfert,
+    Valeur_reelle_au_jour_du_transfert,
+    Montant_impot_sursis_paiement,
+    Pourcentage_de_cession,
+    Droits_exigibles,
+    Désignation_société_groupe_bénéficié,
+    date_transfert
+)
+VALUES
+(1, 101, 10000009, 'Cession d''éléments d''actifs', '2025-01-08', 'Terrains', 'Parcelle-001', 150000.00, 180000.00, 0.00, 0.0, 'Aucun', 'Filiale A', '2025-01-08'),
+(2, 101, 10000010, 'Apport partiel d''actif', '2025-01-09', 'Matériel industriel', 'Machine-XYZ', 200000.00, 220000.00, 5000.00, 2.5, 'Impôt sur les sociétés', 'Partenaire B', '2025-01-09'),
+(3, 102, 10000011, 'Fusion-acquisition', '2025-02-01', 'Bâtiments', 'Immeuble-A', 800000.00, 900000.00, 20000.00, 0.0, 'Droits d''enregistrement', 'Société C', '2025-02-01'),
+(4, 102, 10000012, 'Scission', '2025-02-02', 'Fonds de commerce', 'FDC-001', 300000.00, 350000.00, 8000.00, 0.0, 'Taxe professionnelle', 'Entité D', '2025-02-02'),
+(5, 103, 10000013, 'Transfert intra-groupe', '2025-02-28', 'Logiciels', 'Logiciel-Alpha', 75000.00, 85000.00, 1500.00, 1.0, 'Impôt sur le revenu', 'Filiale E', '2025-02-28'),
+(6, 103, 10000014, 'Cession de titres', '2025-03-01', 'Participations', 'Action-PQR', 120000.00, 130000.00, 2500.00, 5.0, 'Taxe sur la valeur ajoutée', 'Investisseur F', '2025-03-01'),
+(7, 104, 10000015, 'Apport en nature', '2025-04-10', 'Brevets', 'Brevet-123', 90000.00, 100000.00, 0.00, 0.0, 'Aucun', 'Innovations G', '2025-04-10'),
+(8, 104, 10000016, 'Cession de clientèle', '2025-04-11', 'Clientèle', 'Liste-Clients-XYZ', 50000.00, 60000.00, 1000.00, 2.0, 'Impôt sur les plus-values', 'Commercial H', '2025-04-11');

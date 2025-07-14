@@ -1,0 +1,47 @@
+CREATE TABLE `consultationbackoffice`.'agentsdgi' (
+    id_agentsDGI INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(80) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+);
+
+
+CREATE TABLE `consultationbackoffice`.'declaration' (
+    id_declaration INT AUTO_INCREMENT PRIMARY KEY,
+    IF_groupe_société INT,
+    raison_sociale VARCHAR(100),
+    date_depot DATE,
+    statut VARCHAR(50),
+    adresse_siège_social VARCHAR(100),
+    exercice_debut DATE,
+    exercice_fin DATE,
+    lieu_signature VARCHAR(100),
+    date_signature DATE,
+    nom_signataire VARCHAR(100)
+);
+
+
+
+
+
+CREATE TABLE `consultationbackoffice`.`ligne_declaration` (
+    `id_ligne` INT NOT NULL PRIMARY KEY AUTO_INCREMENT, -- J'ai ajouté AUTO_INCREMENT pour gérer automatiquement les IDs
+    `id_declaration` INT NOT NULL, -- C'est la colonne qui sera votre clé étrangère
+    `IF_de_la_societe_du_groupe_ayant_beneficie_du_transfert` INT,
+    `Nature_de_l_evenement` VARCHAR(255),
+    `Date_de_l_evenement` DATE,
+    `Nature_des_immobilisations` VARCHAR(255),
+    `Identification` VARCHAR(255),
+    `Valeur_nette_comptable_au_jour_du_transfert` DOUBLE,
+    `Valeur_reelle_au_jour_du_transfert` DOUBLE,
+    `Montant_impot_sursis_paiement` DOUBLE,
+    `Pourcentage_de_cession` DOUBLE,
+    `Droits_exigibles` VARCHAR(255),
+    `Designation_de_la_societe_du_groupe_ayant_beneficie_du_transfert` VARCHAR(255),
+    `date_de_transfert` DATE,
+    
+    CONSTRAINT `fk_ligne_declaration_declaration` -- Nom de la contrainte de clé étrangère
+    FOREIGN KEY (`id_declaration`) 
+    REFERENCES `consultationbackoffice`.`declaration`(`id_declaration`) 
+    ON DELETE CASCADE 
+    ON UPDATE CASCADE
+);
