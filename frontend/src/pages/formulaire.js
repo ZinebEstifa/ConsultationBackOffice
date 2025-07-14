@@ -150,34 +150,22 @@ const Formulaire = () => {
                                 <label htmlFor="nIdentificationFiscale">N°d'identification fiscale</label>
                                 <input type="text" id="nIdentificationFiscale" name="nIdentificationFiscale" value={formData.nIdentificationFiscale} onChange={handleChange} readOnly />
                             </div>
-                            {/* Les champs non présents dans la table 'declaration' sont commentés */}
-                            {/* <div className="form-group rtl-label-input">
-                                <label htmlFor="numeroTarifDouanier">رقم التعريف الضريبي</label>
-                                <input type="text" id="numeroTarifDouanier" name="numeroTarifDouanier" value={formData.numeroTarifDouanier} onChange={handleChange} readOnly />
-                            </div> */}
+                          
 
                             <div className="form-group">
                                 <label htmlFor="raisonSociale">Raison sociale</label>
                                 <input type="text" id="raisonSociale" name="raisonSociale" value={formData.raisonSociale} onChange={handleChange} readOnly />
                             </div>
-                            {/* Les champs non présents dans la table 'declaration' sont commentés */}
-                            {/* <div className="form-group rtl-label-input">
-                                <label htmlFor="nomCommercial">العنوان التجاري</label>
-                                <input type="text" id="nomCommercial" name="nomCommercial" value={formData.nomCommercial} onChange={handleChange} readOnly />
-                            </div> */}
+                         
 
                             <div className="form-group">
                                 <label htmlFor="adresseSiegeSocial">Adresse du siège social</label>
                                 <input type="text" id="adresseSiegeSocial" name="adresseSiegeSocial" value={formData.adresseSiegeSocial} onChange={handleChange} readOnly />
                             </div>
-                            {/* Les champs non présents dans la table 'declaration' sont commentés */}
-                            {/* <div className="form-group rtl-label-input">
-                                <label htmlFor="adresseSiegeSocialAr">عنوان المقر الاجتماعي</label>
-                                <input type="text" id="adresseSiegeSocialAr" name="adresseSiegeSocialAr" value={formData.adresseSiegeSocialAr} onChange={handleChange} readOnly />
-                            </div> */}
+                          
                         </div>
 
-                        {/* Section Droits exigibles */}
+                     
                         <div className="form-section-title-container">
                             <h3 className="form-section-title">Droits exigibles</h3>
                             <h3 className="form-section-title align-right">الواجبات المستحقة</h3>
@@ -292,25 +280,24 @@ const Formulaire = () => {
 
                         <div className="signature-block">
                             <div className="signature-item">
-                                {/* Remplir avec les données dynamiques */}
+                              
                                 <p>A {formData.lieuSignature} le {formData.dateSignature}</p>
                                 <p>Cachet et signature</p>
                                 {formData.nomSignataire && <p>({formData.nomSignataire})</p>}
                             </div>
                             <div className="signature-item rtl-text">
-                                {/* Remplir avec les données dynamiques */}
+                              
                                 <p>بتاريخ {formData.dateSignature} و حرر ب {formData.lieuSignature}</p>
                                 <p>خاتم و توقيع</p>
                                 {formData.nomSignataire && <p>({formData.nomSignataire})</p>}
                             </div>
                         </div>
 
-                        {/* Footer Buttons */}
                         <div className="form-footer-buttons">
                             <button type="button" className="action-button-red" onClick={() => navigate('/login')}>Annuler</button>
-                            {/* --- AJOUT DE L'ÉVÉNEMENT onClick POUR L'IMPRESSION --- */}
+                     
                             <button type="button" className="action-button-purple" onClick={() => window.print()}>Imprimer</button>
-                            {/* ---------------------------------------------------- */}
+                         
                             <button type="submit" className="action-button-green">Valider</button>
                         </div>
                     </form>

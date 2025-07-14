@@ -20,8 +20,8 @@ const LoginPage = () => {
         }
 
         try {
-            // --- CORRECTION CLÉ ICI : Changer le port de la requête fetch à 5000 ---
-            const response = await fetch('http://localhost:5000/api/auth/login', { // <-- L'URL CORRECTE pour le backend
+           
+            const response = await fetch('http://localhost:5000/api/auth/login', { 
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

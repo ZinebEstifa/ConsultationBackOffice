@@ -7,7 +7,7 @@ body {
 }
 
 .dashboard-page-container {
-    /* Maintained for background image from JSX */
+   
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -35,16 +35,15 @@ body {
     padding: 10px 40px;
     box-sizing: border-box;
     display: flex;
-    justify-content: center; /* CHANGED: To center the content */
+    justify-content: center; 
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.header-nav-items { /* NEW/CHANGED: This container will hold "Déclaration" and "Formulaire" */
+.header-nav-items { 
     display: flex;
     align-items: center;
-    gap: 20px; /* NEW: Space between "Déclaration" and "Formulaire" */
-    /* You can adjust this gap value as needed */
+    gap: 20px; 
 }
 
 .header-button {
@@ -71,7 +70,7 @@ body {
 .header-text-right {
     color: white;
     font-size: 1em;
-    padding: 10px 20px; /* Still useful for visual alignment/clickable area */
+    padding: 10px 20px; 
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -80,7 +79,7 @@ body {
     border-radius: 5px;
 }
 
-/* Adjustments for the rest of the dashboard elements remain the same */
+
 .dashboard-content-wrapper {
     flex-grow: 1;
     display: flex;
@@ -328,12 +327,12 @@ body {
     .dashboard-header {
         padding: 10px 20px;
         flex-direction: column;
-        align-items: center; /* CHANGED: Center items when stacked */
+        align-items: center; 
         gap: 10px;
     }
 
-    .header-nav-items { /* Make sure this also adjusts for smaller screens */
-        flex-direction: column; /* Stack them on small screens */
+    .header-nav-items { 
+        flex-direction: column; 
         gap: 10px;
     }
 

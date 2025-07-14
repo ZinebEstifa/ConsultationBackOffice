@@ -16,10 +16,8 @@ app.use(cors({
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
-// --- CORRECTION CRUCIALE ICI : express.json() doit \u00eatre AVANT les d\u00e9finitions de routes ---
-app.use(express.json()); // Permet \u00e0 Express de parser les corps de requ\u00eates JSON
-// -----------------------------------------------------------------------------------------
 
+app.use(express.json()); 
 app.use('/api/auth', authRoutes);
 app.use('/api/declarations', authMiddleware, declarationRoutes);
 

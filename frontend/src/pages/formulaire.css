@@ -1,13 +1,11 @@
 
 
-/* VersementFormPage.css */
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f0f2f5;
     overflow-y: auto;
-    overflow-x: hidden; /* Prevent horizontal scroll from page overflow */
+    overflow-x: hidden; 
 }
 
 .versement-page-container {
@@ -32,14 +30,14 @@ body {
     z-index: -1;
 }
 
-/* Header styles (reused from DashboardPage.css) */
+
 .dashboard-header {
     width: 100%;
     background-color: #5b4685;
     padding: 10px 40px;
     box-sizing: border-box;
     display: flex;
-    justify-content: center; /* Center the content */
+    justify-content: center; 
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -47,7 +45,7 @@ body {
 .header-nav-items {
     display: flex;
     align-items: center;
-    gap: 20px; /* Space between "Déclaration" and "Formulaire" */
+    gap: 20px; 
 }
 
 .header-button {
@@ -66,9 +64,9 @@ body {
     border-color: white;
     color: white;
 }
-.header-text-right.active-text-header { /* Style for active text if it acts like a button */
+.header-text-right.active-text-header { 
     background-color: rgba(255, 255, 255, 0.2);
-    border: 1px solid white; /* Adding a border for active look */
+    border: 1px solid white; 
     border-radius: 5px;
     padding: 10px 20px;
 }
@@ -91,24 +89,24 @@ body {
 }
 
 
-/* Form specific styles */
+
 .form-content-wrapper {
     flex-grow: 1;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align at top for forms */
+    align-items: flex-start;
     padding: 30px 20px;
     box-sizing: border-box;
     width: 100%;
 }
 
 .form-card-section {
-    background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
+    background-color: rgba(255, 255, 255, 0.8); 
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    width: 95%; /* Wider for form content */
-    max-width: 1200px; /* Adjust max-width as needed */
+    width: 95%; 
+    max-width: 1200px; 
     color: #333;
     display: flex;
     flex-direction: column;
@@ -116,8 +114,8 @@ body {
 
 .form-header-section {
     display: flex;
-    justify-content: space-between; /* To push logos to ends and title to center */
-    align-items: center; /* Vertically center items in this row */
+    justify-content: space-between;
+    align-items: center; 
     margin-bottom: 20px;
     padding-bottom: 15px;
     border-bottom: 1px solid #eee;
@@ -125,37 +123,37 @@ body {
 
 .form-logo-left,
 .form-logo-right {
-    display: flex; /* Use flex to align content within the logo container */
-    align-items: center; /* Vertically center the image if needed */
-    /* No need for specific width, let image size define it */
+    display: flex; 
+    align-items: center; 
+    
 }
 
 .form-logo-left {
-    justify-content: flex-start; /* Align logo to the left */
+    justify-content: flex-start; 
 }
 
 .form-logo-right {
-    justify-content: flex-end; /* Align logo to the right */
+    justify-content: flex-end; 
 }
 
 .logo-dgi {
-    /* ORIGINAL: width: 120px; */
-    width: 150px; /* Increased size for DGI logo */
+   
+    width: 150px; 
     height: auto;
 }
 
-.logo-maroc { /* Style for the right logo, adjust size if needed */
-    /* ORIGINAL: width: 80px; */
-    width: 100px; /* Increased size for Maroc logo */
+.logo-maroc { 
+    
+    width: 100px; 
     height: auto;
 }
 
 .form-title-block {
     flex-grow: 1;
     text-align: center;
-    color: #4a148c; /* Purple color for titles */
-    max-width: 60%; /* To prevent title from being too wide, adjust as needed */
-    margin: 0 20px; /* Add some horizontal margin to separate from logos */
+    color: #4a148c;
+    max-width: 60%; 
+    margin: 0 20px; 
 }
 
 .form-main-title {
@@ -189,7 +187,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #5b4685; /* Purple line under titles */
+    border-bottom: 2px solid #5b4685; 
     padding-bottom: 8px;
     margin-top: 25px;
     margin-bottom: 20px;
@@ -207,7 +205,7 @@ body {
 }
 
 .rtl-label-input {
-    direction: rtl; /* For right-to-left text */
+    direction: rtl; 
     text-align: right;
 }
 
@@ -216,19 +214,19 @@ body {
     margin-bottom: 8px;
     font-weight: bold;
     color: #666;
-    text-align: right; /* Ensure label is right-aligned */
+    text-align: right; 
 }
 
 .rtl-label-input input {
-    direction: ltr; /* Ensure input text is left-to-right */
+    direction: ltr; 
     text-align: left;
 }
 
 
 .form-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns */
-    gap: 20px 40px; /* Row gap, column gap */
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px 40px; 
     margin-bottom: 30px;
 }
 
@@ -248,27 +246,27 @@ body {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 0.95em;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    background-color: #f8f8f8; /* Light gray background for inputs */
+    box-sizing: border-box; 
+    background-color: #f8f8f8; 
 }
 
-/* Exigible Table Specifics */
+
 .exigible-table-container {
-    overflow-x: auto; /* Allow horizontal scroll for wide table */
+    overflow-x: auto; 
     margin-bottom: 20px;
 }
 
 .exigible-table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 1000px; /* Ensure minimum width to make it scrollable if content is narrow */
+    min-width: 1000px; 
 }
 
 .exigible-table th,
 .exigible-table td {
     border: 1px solid #ccc;
     padding: 5px 8px;
-    text-align: center; /* Center text in table headers/cells */
+    text-align: center; 
     font-size: 0.8em;
     vertical-align: top;
 }
@@ -279,27 +277,27 @@ body {
 }
 
 .exigible-table input {
-    width: calc(100% - 10px); /* Adjust width to fit well, accounting for padding */
+    width: calc(100% - 10px);
     padding: 4px;
     border: 1px solid #ddd;
     border-radius: 3px;
     box-sizing: border-box;
     font-size: 0.85em;
-    text-align: center; /* Align input text in the center */
+    text-align: center; 
 }
 
 .exigible-table thead th {
     background-color: #f2f2f2;
     font-weight: bold;
     color: #555;
-    white-space: nowrap; /* Prevent headers from wrapping too much */
+    white-space: nowrap; 
 }
 
 .exigible-table tbody tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
-/* Table Footer Summary */
+
 .table-footer-summary {
     display: flex;
     justify-content: flex-end;
@@ -314,7 +312,7 @@ body {
     padding: 10px 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #e6e6e6; /* Light grey background */
+    background-color: #e6e6e6; 
 }
 
 .total-block p {

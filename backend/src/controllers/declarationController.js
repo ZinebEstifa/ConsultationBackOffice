@@ -1,6 +1,5 @@
 const { getConnection } = require('../config/db');
 
-// Récupérer toutes les déclarations avec options de filtrage et tri
 exports.getAllDeclarations = async (req, res) => {
     const { status, 'if': ifNumber } = req.query;
 
@@ -36,7 +35,7 @@ exports.getAllDeclarations = async (req, res) => {
     }
 };
 
-// Récupérer une déclaration spécifique par son ID, incluant toutes ses lignes de déclaration
+
 exports.getDeclarationById = async (req, res) => {
     const declarationId = req.params.id;
 
@@ -44,7 +43,7 @@ exports.getDeclarationById = async (req, res) => {
     try {
         connection = await getConnection();
 
-        // 1. Récupérer les détails de la déclaration principale
+    
    
         const [declarationRows] = await connection.execute(`
             SELECT 
@@ -70,7 +69,6 @@ exports.getDeclarationById = async (req, res) => {
 
         const declaration = declarationRows[0];
 
-        // 2. Récupérer toutes les lignes de déclaration associées à cette déclaration
         const [ligneDeclarationRows] = await connection.execute(`
             SELECT 
                 id_ligne,

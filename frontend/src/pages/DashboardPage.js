@@ -98,13 +98,13 @@ const DashboardPage = () => {
 
     return (
         <div className="dashboard-page-container" style={{ backgroundImage: `url(${backgroundImage})` }}>
-            {/* Header */}
+        
             <div className="dashboard-header">
                 <button className="header-button active">Déclaration</button>
                 <div className="header-text-right">Formulaire</div>
             </div>
 
-            {/* Main Content Area */}
+           
             <div className="dashboard-content-wrapper">
                 <div className="dashboard-card-section">
                     <h2 className="dashboard-title">Tableau de Bord des Déclarations:</h2>
@@ -181,9 +181,9 @@ const DashboardPage = () => {
                                         </tr>
                                     ) : (
                                         currentDeclarations.map((declaration) => {
-                                            // --- AJOUT DU CONSOLE.LOG ICI ---
+                                       
                                             console.log('Valeur brute de dateDepot:', declaration.date_depot);
-                                            // ---------------------------------
+                                           
                                             return (
                                                 <tr key={declaration.id_declaration} onClick={() => handleRowClick(declaration.id_declaration)} style={{ cursor: 'pointer' }}>
                                                     <td>{declaration.id_declaration}</td>

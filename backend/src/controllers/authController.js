@@ -1,4 +1,4 @@
-const { getConnection } = require('../config/db'); // Modifier l'importation pour utiliser getConnection
+const { getConnection } = require('../config/db'); 
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 

@@ -1,5 +1,5 @@
 const bcrypt = require('bcryptjs');
-    const { getConnection } = require('./src/config/db'); // Assurez-vous que ce chemin est correct
+    const { getConnection } = require('./src/config/db'); 
 
     async function seedAgents() {
         const agents = [
@@ -10,20 +10,19 @@ const bcrypt = require('bcryptjs');
             { email: 'karim.mansour@dgi.ma', password: '123456' },
             { email: 'nadia.elfassi@dgi.ma', password: 'dgi@2025' },
             { email: 'youssef.bouzid@dgi.ma', password: 'monsieur' },
-            // Ajoutez d'autres agents ici si vous en avez plus
-            // { email: 'amina.chk@dgi.ma', password: 'madame' },
+          
         ];
 
         const saltRounds = 10;
-        let connection; // Déclarer la connexion ici
+        let connection; 
 
         try {
-            connection = await getConnection(); // Obtenir la connexion
+            connection = await getConnection(); 
             console.log('Début de l\'insertion/mise à jour des agents...');
 
             for (const agent of agents) {
                 const hashedPassword = await bcrypt.hash(agent.password, saltRounds);
-                // Utilisation de INSERT ... ON DUPLICATE KEY UPDATE pour mettre à jour si l'email existe déjà
+           
                 const sql = `
                     INSERT INTO agentsdgi (email, password)
                     VALUES (?, ?)
@@ -37,7 +36,7 @@ const bcrypt = require('bcryptjs');
             console.error('Erreur lors du seeding:', error);
         } finally {
             if (connection) {
-                connection.end(); // Fermer la connexion
+                connection.end(); 
                 console.log('Connexion MySQL fermée après seeding.');
             }
         }
