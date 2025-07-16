@@ -297,8 +297,7 @@ const Formulaire = () => {
                             <button type="button" className="action-button-red" onClick={() => navigate('/login')}>Annuler</button>
                      
                             <button type="button" className="action-button-purple" onClick={() => window.print()}>Imprimer</button>
-                         
-                            <button type="submit" className="action-button-green">Valider</button>
+                        
                         </div>
                     </form>
                 </div>

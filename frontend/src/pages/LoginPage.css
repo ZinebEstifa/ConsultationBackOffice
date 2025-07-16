@@ -8,7 +8,7 @@ body {
 }
 
 .login-page-container {
-    background-image: url('C:\Users\hp\Desktop\consultationBackOffice\my_app\src\assets\background-DGI.jpg'); 
+    background-image: url('C:\Users\hp\Desktop\consultationBackOffice\frontend\src\assets\background-DGI.jpg'); 
     background-size: cover;
     background-position: center;
     min-height: 100vh;

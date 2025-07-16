@@ -489,7 +489,7 @@ body {
         flex-direction: column;
         gap: 10px;
     }
-    .action-button-red, .action-button-purple, .action-button-green {
+    .action-button-red, .action-button-purple{
         width: 80%;
         margin: 0 auto;
         padding: 10px 20px;
